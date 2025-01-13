@@ -1,0 +1,26 @@
+﻿@page
+@model YourNamespace.Pages.PricingModel
+
+@{
+    ViewData["Title"] = "Pricing";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Service Name</th>
+            <th>Service Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pricing in Model.Pricings)
+        {
+            <tr>
+                <td>@pricing.ServiceName</td>
+                <td>@pricing.ServicePrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
